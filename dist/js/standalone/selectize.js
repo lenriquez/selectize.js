@@ -1681,7 +1681,8 @@
 			var value = self.$control_input.val() || '';
 			if (self.lastValue !== value) {
 				self.lastValue = value;
-				self.onSearchChange(value);
+	      self.onSearchChange(value);
+	      self.$activeOption = undefined;
 				self.refreshOptions();
 				self.trigger('type', value);
 			}
